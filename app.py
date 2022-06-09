@@ -22,7 +22,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     target = os.environ.get('TARGET', 'I know ypu all are fine')
-    return 'Namaste Friends, how are you? :{}!\n'.format(target)
+    return 'AAA Namaste Friends, how are you? :{}!\n'.format(target)
 
 if __name__ == "__main__":
     app.run(debug=True,host='0.0.0.0',port=int(os.environ.get('PORT', 8080)))
