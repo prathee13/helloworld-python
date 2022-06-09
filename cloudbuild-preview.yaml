@@ -36,26 +36,6 @@ steps:
         "--no-traffic",
       ]
 
-  - id: "link revision on pull request"
-    name: "gcr.io/${PROJECT_ID}/deployment-previews" # our custom builder
-    secretEnv: ["GITHUB_TOKEN"]
-    args:
-      [
-        "set",
-        "--project-id",
-        "${PROJECT_ID}",
-        "--region",
-        "${_REGION}",
-        "--service",
-        "${_SERVICE_NAME}",
-        "--pull-request",
-        "${_PR_NUMBER}",
-        "--repo-name",
-        "${_GITHUB_REPO}",
-        "--commit-sha",
-        "${SHORT_SHA}",
-      ]
-
 substitutions:
   _SERVICE_NAME: myservice
   _REGION: us-central1
