@@ -66,5 +66,5 @@ options:
 
 availableSecrets:
   secretManager:
-    - versionName: projects/$PROJECT_ID/secrets/github_token/versions/latest
+    - versionName: projects/$PROJECT_ID/secrets/github_token/versions/2
       env: "GITHUB_TOKEN"
