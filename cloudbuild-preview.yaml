@@ -39,12 +39,6 @@ steps:
 substitutions:
   _SERVICE_NAME: myservice
   _REGION: us-central1
-  _GITHUB_REPO: $(pull_request.repository.id)
 
 options:
   dynamicSubstitutions: true
-
-availableSecrets:
-  secretManager:
-    - versionName: projects/$PROJECT_NUMBER/secrets/github-token/versions/latest
-      env: "GITHUB_TOKEN"
